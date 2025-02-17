@@ -4,7 +4,7 @@ html {
     --color-enter: #fff;
     --color-title: #fff;
     --color-content: #222325;
-    --font-alt: 200 6vw/1 "LXGW WenKai Screen", "Comic Sans MS", "Helvetica Neue", "Microsoft Yahei", "Microsoft Yahei", -apple-system, sans-serif
+    --font-alt: 200 6vw/1 "xkcd-script", "Helvetica Neue", "Microsoft Yahei", "Microsoft Yahei", -apple-system, sans-serif
 }
 
 .fade {
@@ -35,7 +35,7 @@ body, html {
 }
 
 body {
-    font-family: LXGW WenKai Screen, Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif !important;
+    font-family: xkcd-script, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif !important;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
@@ -195,7 +195,7 @@ main {
 }
 
 .content-title {
-    font-family: LXGW WenKai Screen, Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
+    font-family: xkcd-script, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
     font-size: 4.7rem;
     font-weight: 200;
     color: var(--color-title);
@@ -223,7 +223,7 @@ main {
 
 .content-subtitle {
     color: #fff;
-    font-family: LXGW WenKai Screen, Comic Sans MS, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
+    font-family: xkcd-script, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif;
     font-size: 1.2rem;
     font-weight: 200;
     margin-bottom: 2em;
