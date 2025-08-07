@@ -7,6 +7,34 @@ html {
     --font-alt: 200 6vw/1 "xkcd-script", "Helvetica Neue", "Microsoft Yahei", "Microsoft Yahei", -apple-system, sans-serif
 }
 
+/* 防止页面加载时的闪烁 */
+.content-title,
+#card .card-inner header h1,
+.content-subtitle,
+.enter,
+.arrow,
+h1, h2, h3 {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
+
+.content-title.in,
+#card .card-inner.in header h1,
+.content-subtitle.in,
+.enter.in,
+.arrow.in {
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+/* 确保页面背景始终是深色的 */
+html, body {
+    background: var(--color-content) !important;
+}
+
+/* "copernicus","copernicus Fallback", Georgia,"Times New Roman",Times,serif,xkcd-script */
+
 .fade {
     opacity: 0;
     transition: all 1s;
@@ -35,7 +63,7 @@ body, html {
 }
 
 body {
-    font-family: xkcd-script, Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif !important;
+    font-family: "xkcd-script", Helvetica Neue, Microsoft Yahei, -apple-system, sans-serif !important;
     -ms-flex-align: center;
     align-items: center;
     -ms-flex-pack: center;
@@ -43,7 +71,8 @@ body {
     min-height: 100vh;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    -webkit-touch-callout: none
+    -webkit-touch-callout: none;
+    background: var(--color-content);
 }
 
 ul {
@@ -76,6 +105,19 @@ a {
     url('//at.alicdn.com/t/c/font_4460771_p85cf372w4.woff?t=1710084202424') format('woff'),
     url('//at.alicdn.com/t/c/font_4460771_p85cf372w4.ttf?t=1710084202424') format('truetype');
     font-display: auto;
+}
+
+
+.faicon {
+    display: block;
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 auto;
+    fill: currentColor;
+    font-size: inherit;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
 }
 
 .icon {
@@ -203,7 +245,13 @@ main {
     margin-top: .8em;
     margin-bottom: .3em;
     animation: whiteShadow 1.5s ease-in-out infinite alternate;
-    text-shadow: #452d2d 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px
+    text-shadow: #452d2d 0 0 1px, #fffffb 0 0 1px, #fffffb 0 0 2px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.content-title.in {
+    opacity: 1;
 }
 
 @media screen and (max-width: 50em) {
@@ -576,7 +624,13 @@ main {
     color: #fff;
     font-size: 2rem;
     line-height: 1.2em;
-    font-weight: 300
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#card .card-inner.in header h1 {
+    opacity: 1;
 }
 
 #card .card-inner header h2 {
