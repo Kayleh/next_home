@@ -1,16 +1,17 @@
 /* Code Editor Styles */
 .code-editor {
     background: #1e1e1e;
-    border-radius: 8px;
-    width: 600px;
-    margin: 20px auto;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 30px auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
     overflow: hidden;
 }
 
 .code-editor-header {
     background: #252526;
-    padding: 8px 12px;
+    padding: 12px 20px;
     display: flex;
     align-items: center;
     border-bottom: 1px solid #333;
@@ -18,12 +19,12 @@
 
 .window-controls {
     display: flex;
-    gap: 6px;
+    gap: 10px;
 }
 
 .window-control {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
 }
 
@@ -41,29 +42,36 @@
 
 .file-name {
     color: #858585;
-    font-size: 0.9em;
-    margin-left: 20px;
+    font-size: 1.1em;
+    margin-left: 30px;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 .code-content {
-    padding: 20px;
+    padding: 25px 35px;
     font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
-    font-size: 14px;
+    font-size: 17px;
     line-height: 1.5;
     color: #d4d4d4;
+    overflow-x: auto;
+    word-wrap: break-word;
 }
 
 .line-numbers {
     user-select: none;
     color: #858585;
-    margin-right: 15px;
+    margin-right: 25px;
+    min-width: 45px;
+    text-align: right;
+    font-size: 15px;
 }
 
 .code-line {
     display: flex;
     align-items: flex-start;
     margin-bottom: 4px;
+    min-height: 1.5em;
+    word-break: break-all;
 }
 
 .keyword {
@@ -88,6 +96,35 @@
 
 .special {
     color: #c586c0;
+}
+
+.variable {
+    color: #9cdcfe;
+}
+
+/* Code link styles - looks like code links, not buttons */
+.code-link {
+    color: #4ec9b0;
+    text-decoration: underline;
+    text-decoration-color: #4ec9b0;
+    text-decoration-thickness: 1px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    word-break: break-all;
+    font-size: 16px;
+}
+
+.code-link:hover {
+    color: #6a9955;
+    text-decoration-color: #6a9955;
+    background: rgba(106, 153, 85, 0.1);
+    border-radius: 3px;
+    padding: 2px 4px;
+}
+
+.code-link:active {
+    color: #ce9178;
+    text-decoration-color: #ce9178;
 }
 
 /* Links and buttons inside code editor */
@@ -119,4 +156,161 @@
     margin-top: 20px;
     padding-top: 15px;
     border-top: 1px solid #404040;
+}
+
+/* 响应式设计 - 平板设备 */
+@media (max-width: 768px) {
+    .code-editor {
+        width: 100vw;
+        margin: 20px auto;
+        border-radius: 8px;
+    }
+    
+    .code-content {
+        padding: 20px 25px;
+        font-size: 15px;
+    }
+    
+    .file-name {
+        font-size: 1em;
+        margin-left: 25px;
+    }
+    
+    .line-numbers {
+        margin-right: 20px;
+        min-width: 35px;
+        font-size: 13px;
+    }
+    
+    .code-link {
+        font-size: 14px;
+    }
+}
+
+/* 响应式设计 - 移动设备 */
+@media (max-width: 480px) {
+    .code-editor {
+        width: 100vw;
+        margin: 15px auto;
+        border-radius: 6px;
+    }
+    
+    .code-content {
+        padding: 15px 20px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .code-editor-header {
+        padding: 10px 15px;
+    }
+    
+    .file-name {
+        font-size: 0.95em;
+        margin-left: 20px;
+    }
+    
+    .line-numbers {
+        margin-right: 15px;
+        min-width: 30px;
+        font-size: 12px;
+    }
+    
+    .window-control {
+        width: 14px;
+        height: 14px;
+    }
+    
+    .window-controls {
+        gap: 8px;
+    }
+    
+    /* 在移动设备上优化长链接的显示 */
+    .code-line {
+        flex-wrap: wrap;
+    }
+    
+    .code-link {
+        font-size: 13px;
+    }
+}
+
+/* 响应式设计 - 超小屏幕设备 */
+@media (max-width: 320px) {
+    .code-editor {
+        width: 100vw;
+        margin: 10px 0;
+        border-radius: 0;
+    }
+    
+    .code-content {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+    
+    .line-numbers {
+        margin-right: 12px;
+        min-width: 25px;
+        font-size: 11px;
+    }
+    
+    .code-link {
+        font-size: 12px;
+    }
+}
+
+/* 响应式设计 - 大屏幕设备 */
+@media (min-width: 1200px) {
+    .code-editor {
+        width: 100%;
+    }
+    
+    .code-content {
+        font-size: 18px;
+        padding: 30px 40px;
+    }
+    
+    .line-numbers {
+        margin-right: 30px;
+        min-width: 50px;
+        font-size: 16px;
+    }
+    
+    .code-link {
+        font-size: 17px;
+    }
+}
+
+/* 响应式设计 - 超宽屏幕设备 */
+@media (min-width: 1600px) {
+    .code-editor {
+        width: 100%;
+    }
+    
+    .code-content {
+        font-size: 19px;
+        padding: 35px 45px;
+    }
+    
+    .line-numbers {
+        margin-right: 35px;
+        min-width: 55px;
+        font-size: 17px;
+    }
+    
+    .code-link {
+        font-size: 18px;
+    }
+}
+
+/* 确保在横屏模式下也能正常显示 */
+@media (orientation: landscape) and (max-height: 600px) {
+    .code-editor {
+        margin: 15px auto;
+    }
+    
+    .code-content {
+        padding: 20px 25px;
+        font-size: 15px;
+    }
 }

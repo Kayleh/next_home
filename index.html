@@ -19,17 +19,20 @@
         .content-subtitle,
         .enter,
         .arrow,
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             opacity: 0 !important;
             visibility: hidden !important;
             transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
         }
-        
+
         /* 确保页面背景始终是深色的 */
-        html, body {
+        html,
+        body {
             background: #222325 !important;
         }
-        
+
         /* 当元素有in类时显示 */
         .content-title.in,
         #card .card-inner.in header h1,
@@ -52,7 +55,7 @@
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="css/code-editor.css">
-    
+
     <!-- cdn font  -->
     <!--[if lt IE 9]>
     <style>.alert {
@@ -141,8 +144,7 @@
                     </style>
                     <h2 class="content-title">Kayleh</h2>
                     <h3 class="content-subtitle" original-content="Beautiful people Beautiful problem">&nbsp;</h3>
-                    <a
-                        class="enter"></a>
+                    <a class="enter"></a>
                     <!-- &amp;&amp; ⌈Enter⌋  -->
                     <div class="arrow arrow-1"></div>
                     <div class="arrow arrow-2"></div>
@@ -178,35 +180,66 @@
                         <div class="code-content">
                             <div class="code-line">
                                 <span class="line-numbers">1</span>
-                                <span class="keyword">fn</span> <span class="function">main</span>() {
+                                <span class="keyword">fn</span>&nbsp;<span class="function">main</span>() {
                             </div>
                             <div class="code-line">
                                 <span class="line-numbers">2</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">println!</span>(<span class="string">"Hello, I am Kayleh"</span>);
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">println!</span>(<span
+                                    class="string">"Hello, I am Kayleh"</span>);
                             </div>
                             <div class="code-line">
                                 <span class="line-numbers">3</span>
-                                }
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="comment"></span>
                             </div>
-                            <div class="code-line" style="margin-top: auto;">
-                                <div class="editor-links" style="display: flex; justify-content: space-between; width: 100%; padding: 0 20px;">
-                                    <a href="https://blog.kayleh.top/" class="editor-button" aria-label="Blog" style="flex: 1; text-align: center; margin: 0 5px;">
-                                        <i class="icon icon-kaylehblogger"></i>
-                                        <span data-translate="Blog">Blog</span>
-                                    </a>
-                                    <a href="mailto:mail@kayleh.top" class="editor-button" aria-label="Email" target="_blank" style="flex: 1; text-align: center; margin: 0 5px;">
-                                        <i class="faicon fa fa-envelope"></i>
-                                        <span data-translate="Email">Email</span>
-                                    </a>
-                                    <a href="https://github.com/Kayleh" class="editor-button" aria-label="Github" target="_blank" style="flex: 1; text-align: center; margin: 0 5px;">
-                                        <i class="icon icon-kaylehgithub"></i>
-                                        <span data-translate="Github">Github</span>
-                                    </a>
-                                    <a href="https://www.travellings.cn/go.html" class="editor-button" rel="Travellings" title="开往-友链接力" style="flex: 1; text-align: center; margin: 0 5px;">
-                                        <i class="faicon fa fa-subway"></i>
-                                        <span>Travellings</span>
-                                    </a>
-                                </div>
+                            <div class="code-line">
+                                <span class="line-numbers">4</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="keyword">let</span>&nbsp;<span
+                                    class="variable">links</span> = <span class="function">vec!</span>[
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">5</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"<a
+                                        href="https://blog.kayleh.top/" class="code-link"
+                                        target="_blank">https://blog.kayleh.top/</a>"</span>, &nbsp;<span
+                                    class="comment">//
+                                    ✍️Blog</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">6</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"<a
+                                        href="mailto:mail@kayleh.top" class="code-link"
+                                        target="_blank">mail@kayleh.top</a>"</span>, &nbsp;<span class="comment">//
+                                    📧Mail</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">7</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"<a
+                                        href="https://github.com/Kayleh" class="code-link"
+                                        target="_blank">https://github.com/Kayleh</a>"</span>, &nbsp;<span
+                                    class="comment">//
+                                    🐙GitHub</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">8</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="string">"<a
+                                        href="https://www.travellings.cn/go.html" class="code-link" target="_blank"
+                                        rel="Travellings"
+                                        title="开往-友链接力">https://www.travellings.cn/go.html</a>"</span>,
+                                &nbsp;<span class="comment">//
+                                    🌍Travellings</span>
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">9</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;];
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">10</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">println!</span>(<span
+                                    class="string">"Links: {:?}"</span>, <span class="variable">links</span>);
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">11</span>
+                                }
                             </div>
                         </div>
                     </div>

@@ -613,24 +613,24 @@ main {
 #card .card-inner {
     padding: 0;
     border: 0;
-    width: 35%
+    width: 80%
 }
 
 @media screen and (max-width: 1024px) {
     #card .card-inner {
-        width: 45%
+        width: 85%
     }
 }
 
 @media screen and (max-width: 768px) {
     #card .card-inner {
-        width: 50%
+        width: 90%
     }
 }
 
 @media screen and (max-width: 540px) {
     #card .card-inner {
-        width: 60% !important
+        width: 95% !important
     }
 
     #card .card-inner header h1 {
@@ -644,7 +644,7 @@ main {
 
 @media screen and (max-width: 480px) {
     #card .card-inner {
-        width: 90% !important
+        width: 98% !important
     }
 }
 
@@ -689,8 +689,10 @@ main {
 
 #card .card-inner .code-editor {
     margin: 0 auto 40px;
-    width: 90%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 100%;
+    /* 确保代码编辑器能够响应式显示 */
+    box-sizing: border-box;
 }
 
 .editor-links {
@@ -731,6 +733,7 @@ main {
 @media screen and (max-width: 480px) {
     #card .card-inner .code-editor {
         width: 100%;
+        margin: 0 auto 15px;
     }
 
     .editor-links {
@@ -746,6 +749,35 @@ main {
 
     .editor-button i {
         font-size: 1.2em;
+    }
+}
+
+/* 额外的响应式设计 - 确保代码编辑器在各种设备上都能良好显示 */
+@media screen and (max-width: 360px) {
+    #card .card-inner .code-editor {
+        width: 100%;
+        margin: 0 auto 10px;
+    }
+}
+
+/* 横屏模式优化 */
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    #card .card-inner .code-editor {
+        margin: 0 auto 15px;
+    }
+}
+
+/* 大屏幕优化 */
+@media screen and (min-width: 1200px) {
+    #card .card-inner .code-editor {
+        max-width: 100%;
+    }
+}
+
+/* 超宽屏幕优化 */
+@media screen and (min-width: 1600px) {
+    #card .card-inner .code-editor {
+        max-width: 100%;
     }
 }
 
