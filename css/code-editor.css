@@ -1,0 +1,122 @@
+/* Code Editor Styles */
+.code-editor {
+    background: #1e1e1e;
+    border-radius: 8px;
+    width: 600px;
+    margin: 20px auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+
+.code-editor-header {
+    background: #252526;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #333;
+}
+
+.window-controls {
+    display: flex;
+    gap: 6px;
+}
+
+.window-control {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.control-close {
+    background: #ff5f56;
+}
+
+.control-minimize {
+    background: #ffbd2e;
+}
+
+.control-maximize {
+    background: #27c93f;
+}
+
+.file-name {
+    color: #858585;
+    font-size: 0.9em;
+    margin-left: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.code-content {
+    padding: 20px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', monospace;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #d4d4d4;
+}
+
+.line-numbers {
+    user-select: none;
+    color: #858585;
+    margin-right: 15px;
+}
+
+.code-line {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4px;
+}
+
+.keyword {
+    color: #569cd6;
+}
+
+.string {
+    color: #ce9178;
+}
+
+.function {
+    color: #dcdcaa;
+}
+
+.type {
+    color: #4ec9b0;
+}
+
+.comment {
+    color: #6a9955;
+}
+
+.special {
+    color: #c586c0;
+}
+
+/* Links and buttons inside code editor */
+.editor-button {
+    display: inline-block;
+    background: #2d2d2d;
+    color: #d4d4d4;
+    border: 1px solid #404040;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    margin: 4px;
+}
+
+.editor-button:hover {
+    background: #3d3d3d;
+    border-color: #505050;
+}
+
+.editor-button:active {
+    background: #505050;
+}
+
+.editor-links {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #404040;
+}

@@ -51,6 +51,7 @@
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7457165067653912"
         crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="css/code-editor.css">
     
     <!-- cdn font  -->
     <!--[if lt IE 9]>
@@ -98,6 +99,7 @@
 </html>
 
 <body>
+    <div class="loading-progress"></div>
     <main>
         <div class="content content-intro">
             <div class="content-inner">
@@ -138,9 +140,10 @@
                     </style>
                     </style>
                     <h2 class="content-title">Kayleh</h2>
-                    <h3 class="content-subtitle" original-content="Beautiful people Beautiful problem">&nbsp;</h3><a
-                        class="enter">⌈Enter⌋</a>
-                    <!-- &amp;&amp;   -->
+                    <h3 class="content-subtitle" original-content="Beautiful people Beautiful problem">&nbsp;</h3>
+                    <a
+                        class="enter"></a>
+                    <!-- &amp;&amp; ⌈Enter⌋  -->
                     <div class="arrow arrow-1"></div>
                     <div class="arrow arrow-2"></div>
                 </div>
@@ -163,41 +166,50 @@
                         <h1 data-translate="name">Kayleh</h1>
                         <h2 id="signature" data-translate="signature">Code &amp; Manage &amp; Observe</h2>
                     </header>
-                    <ul>
-                        <li>
-                            <a href="https://blog.kayleh.top/" aria-label="Blog"><i class="icon icon-kaylehblogger"></i>
-                                <span data-translate="Blog">Blog</span>
-                            </a>
-                        </li>
-                        <!--
-                <li><a href="https://blog.kayleh.top/about/" aria-label="About"><i
-                        class="icon icon-xiaolian"></i><span data-translate="About">About</span></a></li>
--->
-                        <li><a href="mailto:mail@kayleh.top" aria-label="Email" target="_blank">
-                                <svg t="1710084483017" class="icon" viewBox="0 0 1024 1024" version="1.1"
-                                    xmlns="http://www.w3.org/2000/svg" p-id="1555" width="200" height="200">
-                                    <path
-                                        d="M810.666667 170.666667H213.333333a128 128 0 0 0-128 128v426.666666a128 128 0 0 0 128 128h597.333334a128 128 0 0 0 128-128V298.666667a128 128 0 0 0-128-128z m0 85.333333l-277.333334 190.72a42.666667 42.666667 0 0 1-42.666666 0L213.333333 256z"
-                                        p-id="1556"
-                                        data-spm-anchor-id="a313x.manage_type_myprojects.0.i1.5b733a814IKzAU"
-                                        class="selected" fill="#ffffff"></path>
-                                </svg>
-                                <span data-translate="Email">Email</span></a></li>
-                        <li>
-                            <a href="https://github.com/Kayleh" aria-label="Github" target="_blank"><i
-                                    class="icon icon-kaylehgithub"></i>
-                                <span data-translate="Github">Github</span></a>
-                        </li>
-                        <!-- <li><a href="https://gpt.kayleh.top" aria-label="Github" target="_blank"><i
-                                    class="icon icon-kaylehopenai-fill"></i>
-                                <span data-translate="ChatGPT">AI</span></a>
-                        </li> -->
-                        <li>
-                            <a href="https://www.travellings.cn/go.html" rel="Travellings" title="开往-友链接力">
-                                <i class="faicon fa fa-subway"></i>
-                                <span>Travellings</span></a>
-                        </li>
-                    </ul>
+                    <div class="code-editor">
+                        <div class="code-editor-header">
+                            <div class="window-controls">
+                                <div class="window-control control-close"></div>
+                                <div class="window-control control-minimize"></div>
+                                <div class="window-control control-maximize"></div>
+                            </div>
+                            <div class="file-name">main.rs</div>
+                        </div>
+                        <div class="code-content">
+                            <div class="code-line">
+                                <span class="line-numbers">1</span>
+                                <span class="keyword">fn</span> <span class="function">main</span>() {
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">2</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;<span class="function">println!</span>(<span class="string">"Hello, I am Kayleh"</span>);
+                            </div>
+                            <div class="code-line">
+                                <span class="line-numbers">3</span>
+                                }
+                            </div>
+                            <div class="code-line" style="margin-top: auto;">
+                                <div class="editor-links" style="display: flex; justify-content: space-between; width: 100%; padding: 0 20px;">
+                                    <a href="https://blog.kayleh.top/" class="editor-button" aria-label="Blog" style="flex: 1; text-align: center; margin: 0 5px;">
+                                        <i class="icon icon-kaylehblogger"></i>
+                                        <span data-translate="Blog">Blog</span>
+                                    </a>
+                                    <a href="mailto:mail@kayleh.top" class="editor-button" aria-label="Email" target="_blank" style="flex: 1; text-align: center; margin: 0 5px;">
+                                        <i class="faicon fa fa-envelope"></i>
+                                        <span data-translate="Email">Email</span>
+                                    </a>
+                                    <a href="https://github.com/Kayleh" class="editor-button" aria-label="Github" target="_blank" style="flex: 1; text-align: center; margin: 0 5px;">
+                                        <i class="icon icon-kaylehgithub"></i>
+                                        <span data-translate="Github">Github</span>
+                                    </a>
+                                    <a href="https://www.travellings.cn/go.html" class="editor-button" rel="Travellings" title="开往-友链接力" style="flex: 1; text-align: center; margin: 0 5px;">
+                                        <i class="faicon fa fa-subway"></i>
+                                        <span>Travellings</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <!--<a class="enter" id="busuanzi_container_site_pv" style="font-size:8px"><a class="enter"
                                                                                       id="busuanzi_value_site_pv"
                                                                                       style="font-size:8px"><a
@@ -241,6 +253,7 @@
                 SUNRAYS_WEIGHT: 1.0,
             }
         </script>
+        <script src="js/random-gradient.js"></script>
         <script src="js/main.js"></script>
         <script src="js/background.js"></script>
         <script> var _hmt = _hmt || [];
@@ -255,5 +268,6 @@
     <footer>
         <link rel="stylesheet" href="css/font.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/code-editor.css">
     </footer>
 </body>
