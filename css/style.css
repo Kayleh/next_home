@@ -693,3 +693,59 @@ main {
     max-width: 600px;
 }
 
+.editor-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 20px;
+}
+
+.editor-button {
+    flex: 1;
+    text-align: center;
+    margin: 0 5px;
+    padding: 8px;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    #card .card-inner .code-editor {
+        width: 95%;
+        margin: 0 auto 20px;
+    }
+
+    .editor-links {
+        flex-wrap: wrap;
+        padding: 0 10px;
+    }
+
+    .editor-button {
+        flex: 1 1 40%;
+        margin: 5px;
+        font-size: 0.8rem;
+        padding: 6px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #card .card-inner .code-editor {
+        width: 100%;
+    }
+
+    .editor-links {
+        padding: 0 5px;
+    }
+
+    .editor-button {
+        flex: 1 1 100%;
+        margin: 3px;
+        font-size: 0.75rem;
+        padding: 4px;
+    }
+
+    .editor-button i {
+        font-size: 1.2em;
+    }
+}
+
