@@ -17,8 +17,17 @@
     <meta name="description" content="Kayleh Blog">
     <link rel="icon" href="https://cdn.hinsyeow.org/gh/kayleh/cdn/img/2.jpg" type="image/x-icon">
     <link rel="shortcut icon" href="https://cdn.hinsyeow.org/gh/kayleh/cdn/img/2.jpg" type="image/x-icon">
-    <script async defer src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7457165067653912"
-     crossorigin="anonymous"></script>
+    <!-- 延迟加载 Google AdSense -->
+    <script>
+        window.addEventListener('load', function() {
+            var adsScript = document.createElement('script');
+            adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7457165067653912';
+            adsScript.async = true;
+            adsScript.defer = true;
+            adsScript.crossOrigin = 'anonymous';
+            document.head.appendChild(adsScript);
+        });
+    </script>
     <!-- cdn font  -->
     <!--[if lt IE 9]>
     <style>.alert {
@@ -57,8 +66,6 @@
     <script src="https://fastly.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
     <script async src="js/busuanzi.pure.mini.js"></script>
     <script async src="//code.tidio.co/dq5klo9ydptaxokj83vcwnusf63dogzr.js" defer type="text/javascript"></script>
-    <script async data-ad-client="ca-pub-7457165067653912"
-            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <![endif]-->
 </head>
 
